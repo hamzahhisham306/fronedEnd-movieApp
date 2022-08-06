@@ -1,0 +1,40 @@
+.boxs{
+  display: grid !important;
+  grid-template-columns: repeat(auto-fill,minmax(300px , auto)) !important;
+  padding-top: 100px;
+  padding-left: 80px;
+   
+}
+body{
+  background-color: #222831 !important;
+}
+.card-body{
+  background-color: #00ADB5 !important;
+
+
+}
+.card{
+  margin-top: 20px ;
+  text-align: center !important;
+}
+.card-text{
+  color: #EAEAEA !important;
+}
+.vote{
+  color: #FF2E63 !important;
+}
+
+button{
+  background-color: #FF2E63 !important;
+  border: none !important;
+  color: #EAEAEA !important;
+}
+.modal-content{
+  background-color: #00ADB5 !important;
+}
+.modal-body{
+  color: #222831 !important;
+}
+.modal-header{
+  color: #FF2E63;
+}

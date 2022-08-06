@@ -4,16 +4,18 @@ import Form from 'react-bootstrap/Form';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import axios from 'axios';
 import Card from './Card'
-
+import Page from './Page.json';
 
 
 
 class movie extends React.Component{
+    
     constructor(props){
         super(props);
         this.state={
             movieName:'',
             ArrayMovies:[],
+            pageArray:[],
         }
     }
     handlerChange=(e)=>{
@@ -28,6 +30,10 @@ class movie extends React.Component{
         this.Movie(movieNames);
       
     }
+  
+
+
+    
     Movie=async (name)=>{
     
         const url=`https://moviebackend-api.herokuapp.com/movies?searchQuery=${name}`;
@@ -44,6 +50,7 @@ class movie extends React.Component{
 
     }
     render(){
+
         return(
             <>
             <Form   onChange={this.handlerChange}>
@@ -61,6 +68,9 @@ class movie extends React.Component{
             <Card key={index} poster_path={move.poster_path} title={move.title} vote_average={move.vote_average} overview={move.overview}/>
            
             )
+          })}
+          {Page.results.map((res, index)=>{
+             return <Card poster_path={res.poster_path} title={res.title} vote_average={res.vote_average} overview={res.overview} key={index}/>
           })}
           
           </div>

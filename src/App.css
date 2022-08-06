@@ -38,3 +38,10 @@ button{
 .modal-header{
   color: #FF2E63;
 }
+@media(max-width:500px){
+  .boxs{
+  
+    padding-left: 40px !important;
+     
+  }
+}
